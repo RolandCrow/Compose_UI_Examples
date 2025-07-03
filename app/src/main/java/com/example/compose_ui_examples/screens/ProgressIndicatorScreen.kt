@@ -16,7 +16,7 @@ import com.example.compose_ui_examples.router.FundamentalsRouter
 import com.example.compose_ui_examples.router.Screen
 
 @Composable
-fun Screen.ProgressIndicatorScreen() {
+fun ProgressIndicatorScreen() {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,

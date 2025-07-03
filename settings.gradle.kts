@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Compose_UI_Examples"
 include(":app")
+include(":layout_groups")

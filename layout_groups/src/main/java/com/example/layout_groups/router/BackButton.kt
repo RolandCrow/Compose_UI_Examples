@@ -1,9 +1,8 @@
-package com.example.compose_ui_examples.router
+package com.example.layout_groups.router
 
 import androidx.activity.ComponentActivity
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.OnBackPressedDispatcherOwner
-import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.DisposableEffect
@@ -13,9 +12,9 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.lifecycle.compose.LocalLifecycleOwner
 
 private val LocalBackPressedDispatcher = staticCompositionLocalOf<OnBackPressedDispatcherOwner?> { null }
-
 private class ComposableBackHandler(enabled: Boolean): OnBackPressedCallback(enabled) {
     lateinit var onBackPressed: () -> Unit
+
     override fun handleOnBackPressed() {
         onBackPressed()
     }
@@ -33,6 +32,7 @@ internal fun Handler(
         dispatcher.addCallback(handler)
         onDispose { handler.remove() }
     }
+
     LaunchedEffect(enabled) {
         handler.isEnabled = enabled
         handler.onBackPressed = onBackPressed
@@ -40,7 +40,7 @@ internal fun Handler(
 }
 
 @Composable
-internal fun BackButtonHandler(onBackPressed: ()-> Unit) {
+internal fun BackButton(onBackPressed: () -> Unit) {
     CompositionLocalProvider(
         LocalBackPressedDispatcher provides LocalLifecycleOwner.current as ComponentActivity
     ) {
