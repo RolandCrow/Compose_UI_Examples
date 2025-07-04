@@ -1,4 +1,4 @@
-package com.example.layout_groups
+package com.example.lists
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,8 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.layout_groups.app.FundamentalsApp
-import com.example.layout_groups.ui.theme.Compose_UI_ExamplesTheme
+import com.example.lists.ui.theme.Compose_UI_ExamplesTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +19,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Compose_UI_ExamplesTheme {
-                FundamentalsApp()
+
             }
         }
     }

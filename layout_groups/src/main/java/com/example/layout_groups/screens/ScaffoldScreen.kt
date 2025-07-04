@@ -33,7 +33,6 @@ fun ScaffoldScreen() {
     }
 }
 
-
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun MyScaffold() {
