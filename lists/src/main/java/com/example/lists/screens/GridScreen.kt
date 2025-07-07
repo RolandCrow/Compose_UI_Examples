@@ -20,6 +20,9 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.lists.R
+import com.example.lists.router.BackButton
+import com.example.lists.router.FundamentalsRouter
+import com.example.lists.router.Screen
 
 private val items = listOf(
     Icons.Filled.Check,
@@ -45,6 +48,9 @@ fun GridScreen() {
             }
         }
     )
+    BackButton {
+        FundamentalsRouter.navigateTo(Screen.Navigation)
+    }
 }
 
 @Composable

@@ -14,11 +14,25 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.example.lists.R
+import com.example.lists.router.BackButton
+import com.example.lists.router.FundamentalsRouter
+import com.example.lists.router.Screen
+
+@Composable
+fun ScrollingScreen() {
+    MyScrollingScreen()
+    BackButton {
+        FundamentalsRouter.navigateTo(Screen.Navigation)
+    }
+}
 
 @Composable
 fun MyScrollingScreen(modifier: Modifier = Modifier) {
     Row(modifier = modifier.horizontalScroll(rememberScrollState())) {
-
+        BookImage(R.drawable.advanced_architecture_android, R.string.advanced_architecture_android)
+        BookImage(R.drawable.kotlin_aprentice, R.string.kotlin_apprentice)
+        BookImage(R.drawable.kotlin_coroutines, R.string.kotlin_coroutines)
     }
 }
 
