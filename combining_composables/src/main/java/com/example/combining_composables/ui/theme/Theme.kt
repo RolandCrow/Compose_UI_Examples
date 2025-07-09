@@ -9,6 +9,9 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
@@ -55,4 +58,8 @@ fun Compose_UI_ExamplesTheme(
         typography = Typography,
         content = content
     )
+}
+
+data object Compose_UI_ExamplesThemeSettings {
+    var isDarkThemeEnabled by mutableStateOf(false)
 }
