@@ -20,7 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun TopAppBar(
+fun CustomTopAppBar(
     title: String,
     icon: ImageVector,
     onIconClick: ()-> Unit,
